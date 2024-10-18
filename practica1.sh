@@ -15,7 +15,7 @@ if [[ ! -z "$entrada" ]];then #Si la cadena d'entrada no és buida comprovar si 
         	l=$(grep -m 1 -n -i "$entrada" infosearch.csv | cut -b 1) #Grep per trobar el número de la línea amb els paràmetres entrats coincidents.
         	if [[ ! -z $l ]];then #Si hi ha coincidències imprimir Title, Publish_time, views, likes, dislikes, Ranking_Views, Rlikes i Rdislikes per pantalla.
 			sortida=$(head -n $l sortida.csv | tail -1)
-        		echo "$sortida" | cut -d',' -f 3,6,8,9,14,15,16
+        		echo "$sortida" | cut -d',' -f 3,6,8,9,10,15,16,17
 		else
 			echo "No s'han trobat coincidències."
 		fi
